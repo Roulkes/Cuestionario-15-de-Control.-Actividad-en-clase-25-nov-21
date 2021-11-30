@@ -1,0 +1,178 @@
+#Problema 2.1
+M = int(input("Dame un valor entero"))
+T = 0
+if M>0:
+    T = (M/4) + 40
+    print("Temperatura:",T)
+#Problema 2.2
+P = int(input("Dame un valor de tipo entero para P: "))
+Q = int(input("Dame otro valor de tipo entero para Q: "))
+EXP = P**3 + Q**4 -2*P**2
+if EXP < 660:
+    print("Valor P:",P,"Valor Q:",Q)
+#Problema 2.3
+A = float(input("Dame el valor para A: "))
+B = float(input("Dame un valor para B: "))
+C = float(input("Dame un valor para C: "))
+DIS = B**2-4*A*C
+print(DIS)
+if DIS >= 0:
+    X1 = ((-B) + DIS**0.5) /(2*A)
+    X2 = ((-B) - DIS**0.5) /(2*A)
+    print("Raices Reales: X1 =",X1,"X2 =",X2)
+
+#Problema 2.4
+MAT = int(input("Dame tu matricula: "))
+CAL1 = float(input("Dame tu Primer calificación: "))
+CAL2 = float(input("Dame tu segunda calificación:"))
+CAL3 = float(input("Dame tu tercera calificación:"))
+CAL4 = float(input("Dame tu cuarta calificación:"))
+CAL5 = float(input("Dame tu quinta calificación:"))
+PRO = (CAL1 + CAL2 + CAL3 + CAL4 + CAL5)/5
+if PRO >= 6:
+    print("Tu número de matricula es:",MAT,"y tu promedio es de:",PRO,"¡¡¡¡¡APROBADO, FELICIDADES!!!!!")
+else:
+    print("Tu número de matricula es:",MAT,"y tu promedio es de:",PRO,"NO APROBADO, ESTUDIA MAS")
+
+#Problema 2.5
+NUM = float(input("Dame un número: "))
+if NUM > 0:
+    print("El número:",NUM,"es: POSITIVO")
+elif NUM == 0:
+    print("El número:",NUM,"es: NULO")
+else:
+    print("El número:",NUM,"es: NEGATIVO")
+  
+#Problema 2.6
+A = int(input("Dame un valor de tipo entero: "))
+if A == 0:
+    print("El número:",A,"es: NULO")
+elif A%2 == 0:
+    print("Par")
+else:
+    print("Impar")
+    
+#Problema 2.7
+A = int(input("Dame un valor de tipo entero para A: "))
+B = int(input("Dame un valor de tipo entero para B: "))
+C = int(input("Dame un valor de tipo entero para C: "))
+if A < B:
+    if B < C:
+        print("Los números están en orden creciente")
+    else:
+        print("Los números NO están en orden creciente")
+else:
+    print("Los números NO están en orden creciente")
+    
+#Problema 2.8 
+COMPRA = float(input("Dame el monto de tu compra: "))
+PAGAR = 0
+if COMPRA < 500:
+    PAGAR = COMPRA
+elif COMPRA <= 1000:
+    PAGAR = COMPRA-(COMPRA*0.05)
+elif COMPRA <= 7000:
+    PAGAR = COMPRA-(COMPRA*0.11)
+elif COMPRA <= 15000:
+    PAGAR = COMPRA-(COMPRA*0.18)
+else: 
+    PAGAR = COMPRA-(COMPRA*0.25)
+print("Tu debes pagar",PAGAR,"pesos")
+
+#Problema 2.9
+PREBAS = float(input("Dame el valor del producto: "))
+IMP = 0 
+PRETOT = 0
+if PREBAS > 500:
+    IMP = 20*0.30 + (PREBAS-40)*0.50
+elif PREBAS > 40:
+    IMP = 20*0.30 + (PREBAS-40)*0.40
+elif PREBAS > 20:
+    IMP = 20*0.30 + (PREBAS-40)*0.30
+else:
+    IMP = 0
+PRETOT = PREBAS + IMP
+print("Prebas =",PREBAS,"Pretot =",PRETOT)
+
+#Problema 2.10
+A = float(input("Dame un valor de tipo entero para A: "))
+B = float(input("Dame un valor de tipo entero para B: "))
+C = float(input("Dame un valor de tipo entero para C: "))
+if A > B:
+    if A > C:
+        print("El valor A es el mayor")
+    elif A == C:
+        print("A y C son iguales")
+    else:
+        print("C es el mayor") 
+elif A == B:
+    if A > C:
+        print("A y B son mayores")
+    elif A == C:
+        print("A B Y C son iguales")
+    else:
+        print("C es el mayor")
+elif B > C:
+    print("B es el mayor")
+    if B == C:
+        print("B y C son mayores")
+else:
+    print("C es el mayor")
+    
+#Problema 2.11
+CLAVE = int(input("Dame la clave de tu zona geografica: "))
+NUMIN = int(input("Minutos hablados: "))
+if CLAVE == 12:
+    COST = NUMIN*2
+elif CLAVE == 15:
+    COST = NUMIN*2.2
+elif CLAVE == 18:
+    COST = NUMIN*4.5
+elif CLAVE == 19:
+    COST = NUMIN*3.5
+elif CLAVE == 23:
+    COST = NUMIN*6
+elif CLAVE == 25:
+    COST = NUMIN*6
+elif CLAVE == 29:
+    COST = NUMIN*5
+print("Costo total de la llamada es:",COST)
+
+#Problema 2.12
+SUE = float(input("Dame tu sueldo: "))
+CATE = int(input("¿Que categoría eres?: "))
+HE = int(input("¿Cuantas horas extra haz trabajado?: "))
+if CATE == 1:
+    PHE = 30
+elif CATE == 2:
+    PHE = 38
+elif CATE == 3:
+    PHE = 50
+elif CATE == 4:
+    PHE = 70
+else:
+    PHE = 0
+if HE > 30:
+    MSUE = SUE + 30*PHE
+else:
+    MSUE = SUE + HE*PHE
+print("Tu sueldo final es:",MSUE)
+
+#Problema 2.13
+MAT = int(input("Dame tu matricula de alumno: "))
+CARR = input("Dime cual es tu carrera: ")
+SEM = int(input("Dime en que semestre estas: "))
+PROM = float(input("Dame tu promedio y espero que sea aprobatorio: "))
+if CARR == "Economía":
+    if SEM >= 6 and PROM >= 8.8:
+        print(MAT,CARR,"ACEPTADO")
+elif CARR == "Computación":
+    if SEM >= 6 and PROM >= 8.5:
+        print(MAT,CARR,"ACEPTADO")
+elif CARR == "Administración":
+    if SEM >= 5 and PROM >= 8.5:
+        print(MAT,CARR,"ACEPTADO")
+elif CARR == "Contabilidad":
+    if SEM >= 5 and PROM >= 8.5:
+        print(MAT,CARR,"ACEPTADO")
+        
